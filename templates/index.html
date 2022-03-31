@@ -73,7 +73,7 @@
             <div class="col-12">
                 <div class="scroll_box">
                 {% for i in session['ledger'] %}
-                    <p>{{i}} on {{session.time}}</p>
+                    <p class="{{i['color']}}">{{i['message']}} {{session.time}}</p>
                 {% endfor %}
                 </div>
             </div>      
