@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, session, redirect, request
 import random
 from datetime import datetime
@@ -40,6 +41,9 @@ def process_money():
         if casino_gold > 0:
             message = f"Wow! You found {casino_gold} gold!"
             color = "green"
+        elif casino_gold == 0:
+            message = f"You didn't find any gold, but you didn't lose any either!"
+            color = "blue"
         else:
             message = f"Oh No! You lost {casino_gold} gold! Bummer!"
             color = "red"
